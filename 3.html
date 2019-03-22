@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grades</title>
+	<meta charset="utf-8">
+
+	<script>
+		function Grade() {
+  		var show;
+  		var mark = parseFloat(document.getElementById("score").value);
+
+  		if (mark <0 || mark > 100) {
+   			 show = "Please input legal value(0~100)";
+  		}else if(mark >= 60){
+  			show = "You Pass"
+  		}else {
+    		show = "You Fail";
+  		}
+  		/*這個是要設一個ID，是show出東西的ID*/
+  		document.getElementById("Grade2").innerHTML = show;
+		}
+	</script>
+</head>
+<body>
+	<p>Please enter your exam scores and I will show your grade:</p>
+	<input type="number" id = "score" value=60>
+
+	<button onclick="Grade()">Try it</button>	
+	<p id ="Grade2"></p>
+
+	
+
+
+</body>
+</html>

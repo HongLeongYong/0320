@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+</head>
+<body>
+	<p id="demo"></p>
+	<canvas id ="myCanvas" width="500" height="600" style="border:1px solid #d3d3d3;">
+		<script language=javascript>
+			
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			var i =0;
+			ctx.fillStyle = "red";
+			setInterval(move,100);
+			function move()	{
+
+				ctx.clearRect(i,50,50,50);
+				i= i + 10 ;
+				if (i > 450){
+					i = 450;
+				}
+				ctx.fillRect(i,50,50,50);				
+				
+			}
+			
+			
+			
+
+			
+
+
+		</script>
+		
+	</canvas>
+
+</body>
+<body>
+
+</body>
+</html>
