@@ -6,11 +6,18 @@
 
 </head>
 <body>	
-	<input type="number" id = "MyData" value=1>
-	<input type="number" id = "MyData2" value=3>
+	<input type="number" id = "MyData" value=0>
+	<input type="number" id = "MyData2" value=0>
 	<br>
 
 	<script>
+		function zero(){
+			var c = 0;
+			document.getElementById("MyData").value = c;
+			document.getElementById("MyData2").value = c;
+			document.getElementById("result").innerHTML = c;
+		}
+
 		function add(){
 			var x,y;
 			x = parseFloat(document.getElementById("MyData").value);
@@ -45,6 +52,7 @@
 	<button onclick="minus()">減</button>
 	<button onclick="times()">乘</button>
 	<button onclick="divide()">除</button>
+	<button onclick="zero()">Clear</button>
 
 	<h5>計算結果:</h5>
 	<output id = "result"></output>
