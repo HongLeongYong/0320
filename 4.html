@@ -5,32 +5,28 @@
 	<meta http-equiv="content-type" content="text/html;charset=utf-8">
 </head>
 <body>
-	<p id="demo"></p>
-	<canvas id ="myCanvas" width="500" height="600" style="border:1px solid #d3d3d3;">
+	
+	<canvas id ="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;">
 		<script language=javascript>
-			
+			var time1;
 			var c = document.getElementById("myCanvas");
 			var ctx = c.getContext("2d");
 			var i =0;
 			ctx.fillStyle = "red";
-			setInterval(move,100);
-			function move()	{
-
+			time1 = setInterval(move,50);
+			function move()	{				
+				ctx.clearRect(50,i,50,50);
 				ctx.clearRect(i,50,50,50);
 				i= i + 10 ;
-				if (i > 450){
-					i = 450;
+				if (i >= 450){					
+					clearInterval(time1);
 				}
-				ctx.fillRect(i,50,50,50);				
+				ctx.fillRect(i,50,50,50);	
+				ctx.fillRect(50,i,50,50);				
 				
 			}
 			
-			
-			
-
-			
-
-
+	
 		</script>
 		
 	</canvas>
